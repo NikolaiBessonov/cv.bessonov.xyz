@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Kafka",
                 "PostgreSQL, MongoDB, Elasticsearch",
                 "Keycloak / SSO",
+                "HashiCorp Vault",
                 "Linux",
                 "Istio"
             ],
@@ -59,6 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     period: "июнь 2025 – н.в.",
                     bullets: [
                         "Разворачивал и поддерживал production Kubernetes-кластеры на AWS EC2 и bare-metal серверах (Hetzner, Fornex) с помощью Terraform, используя переиспользуемые модули для AWS, Hetzner и OpenNebula, что сократило время подготовки кластера с ~недели до одного рабочего дня.",
+                        "Внедрил централизованное хранение секретов на HashiCorp Vault для 24 Kubernetes-кластеров: каждая команда получает доступ только к своим секретам по принципу наименьших привилегий, лишние права убраны, все обращения логируются для аудита.",
+                        "Обеспечил бесперебойную работу сервисов с нагрузкой около миллиарда запросов в сутки на 24 Kubernetes-кластерах.",
                         "Заменил фиксированный парк on-demand нод на автоскейлинг через Karpenter (on-demand база для HA между зонами, Spot для пиковой нагрузки) и NLB (L4) для входящего трафика, сократив расходы на вычисления более чем на 60% без даунтайма при деплоях.",
                         "Мигрировал Kubernetes-кластеры в production, staging, dev и lab окружениях (bare-metal, Hetzner, Fornex) на Talos OS без даунтайма. В рамках миграции также сменил сетевой плагин кластера с Flannel на Cilium, повысив безопасность, масштабируемость и производительность сети.",
                         "Повысил безопасность Kubernetes-кластеров, перенеся системные сервисы во внутреннюю сеть и сократив внешнюю поверхность атаки.",
@@ -162,6 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 "Kafka",
                 "PostgreSQL, MongoDB, Elasticsearch",
                 "Keycloak / SSO",
+                "HashiCorp Vault",
                 "Linux",
                 "Istio"
             ],
@@ -172,6 +176,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     period: "Jun 2025 – Present",
                     bullets: [
                         "Set up and managed production Kubernetes clusters on AWS EC2 and bare-metal servers (Hetzner, Fornex) using Terraform, with reusable modules for AWS, Hetzner, and OpenNebula that cut cluster setup time from about one week to one working day.",
+                        "Implemented centralized secrets management with HashiCorp Vault for 24 Kubernetes clusters: each team can access only its own secrets under least-privilege policies, excess permissions were removed, and all access is audit-logged.",
+                        "Kept services running reliably at about one billion requests per day across 24 Kubernetes clusters.",
                         "Replaced a fixed fleet of on-demand nodes with Karpenter-managed autoscaling (on-demand baseline for HA across zones, Spot for burst capacity) and NLB (L4) for traffic ingress, cutting compute costs by over 60% with zero downtime during deployments.",
                         "Migrated Kubernetes clusters in production, staging, dev, and lab environments (bare-metal, Hetzner, Fornex) to Talos OS with zero downtime. As part of this, also changed the cluster networking from Flannel to Cilium, improving security, scalability, and network performance.",
                         "Improved Kubernetes cluster security by moving system services to the internal network and reducing external exposure.",
