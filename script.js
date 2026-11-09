@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             metaDescription:
                 "Николай Бессонов, Senior DevOps-инженер (CKA/CKS). Kubernetes, Terraform, GitOps, 7+ лет опыта в инфраструктурных платформах для финтеха. Открыт к предложениям.",
             about:
-                "Senior DevOps-инженер, более 7 лет строит и эксплуатирует крупные инфраструктурные платформы, включая CI/CD для 150+ проектов. Работает с Kubernetes, Terraform, AWS, bare-metal (Talos, Cilium), GitLab CI и ArgoCD, участвует в разработке open-source инфраструктурных инструментов. Строил инфраструктурные платформы и SSO-системы для финтеха и других крупных компаний, где главными требованиями были отказоустойчивость и автоматизация. Сертифицирован CKA и CKS.",
+                "Senior DevOps-инженер, более 7 лет строю и эксплуатирую крупные инфраструктурные платформы, включая CI/CD для 150+ проектов. Работаю с Kubernetes, Terraform, AWS, bare-metal (Talos, Cilium), GitLab CI и ArgoCD, участвую в разработке open-source инфраструктурных инструментов. Строил инфраструктурные платформы и SSO-системы для финтеха и других крупных компаний, где главными требованиями были отказоустойчивость и автоматизация. Сертифицирован CKA и CKS.",
             skills: [
                 "Python, Bash",
                 "Docker",
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
             metaDescription:
                 "Nikolai Bessonov, Senior DevOps Engineer (CKA/CKS). Kubernetes, Terraform, GitOps: 7+ years building infra platforms for fintech and enterprise. Open to work.",
             about:
-                "Senior DevOps Engineer with 7+ years of building and running large infrastructure platforms, including CI/CD for 150+ projects. Works with Kubernetes, Terraform, AWS, bare-metal (Talos, Cilium), GitLab CI, and ArgoCD, and contributes to open-source infrastructure tools. Has built infrastructure platforms and SSO systems for fintech and other large enterprises, where high availability and automation were the main requirements. CKA and CKS certified.",
+                "Senior DevOps Engineer with 7+ years of building and running large infrastructure platforms, including CI/CD for 150+ projects. Hands-on with Kubernetes, Terraform, AWS, bare-metal (Talos, Cilium), GitLab CI, and ArgoCD; contributor to open-source infrastructure tools. Built infrastructure platforms and SSO systems for fintech and other large enterprises, where high availability and automation were the main requirements. CKA and CKS certified.",
             skills: [
                 "Python, Bash",
                 "Docker",
