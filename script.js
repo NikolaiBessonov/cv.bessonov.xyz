@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             metaDescription:
                 "Николай Бессонов, Senior DevOps-инженер (CKA/CKS). Kubernetes, Terraform, GitOps, 7+ лет опыта в инфраструктурных платформах для финтеха. Открыт к предложениям.",
             about:
-                "Senior DevOps-инженер с 7+ годами опыта в построении и эксплуатации крупных инфраструктурных платформ, включая CI/CD для 150+ проектов. Работает с Kubernetes, Terraform, AWS, bare-metal (Talos, Cilium), GitLab CI и ArgoCD, участвует в разработке open-source инфраструктурных инструментов. Опыт работы в финтехе и других крупных корпорациях, включая построение инфраструктурных платформ и SSO-систем с упором на отказоустойчивость и автоматизацию. Сертифицирован CKA и CKS.",
+                "Senior DevOps-инженер, более 7 лет строит и эксплуатирует крупные инфраструктурные платформы, включая CI/CD для 150+ проектов. Работает с Kubernetes, Terraform, AWS, bare-metal (Talos, Cilium), GitLab CI и ArgoCD, участвует в разработке open-source инфраструктурных инструментов. Строил инфраструктурные платформы и SSO-системы для финтеха и других крупных компаний, где главными требованиями были отказоустойчивость и автоматизация. Сертифицирован CKA и CKS.",
             skills: [
                 "Python, Bash",
                 "Docker",
@@ -60,15 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     period: "июнь 2025 – н.в.",
                     bullets: [
                         "Разворачивал и поддерживал production Kubernetes-кластеры на AWS EC2 и bare-metal серверах (Hetzner, Fornex) с помощью Terraform, используя переиспользуемые модули для AWS, Hetzner и OpenNebula, что сократило время подготовки кластера с ~недели до одного рабочего дня.",
-                        "Внедрил централизованное хранение секретов на HashiCorp Vault для 24 Kubernetes-кластеров: каждая команда получает доступ только к своим секретам по принципу наименьших привилегий, лишние права убраны, все обращения логируются для аудита.",
-                        "Обеспечил бесперебойную работу сервисов с нагрузкой около миллиарда запросов в сутки на 24 Kubernetes-кластерах.",
+                        "Внедрил централизованное хранение секретов на HashiCorp Vault для 24 Kubernetes-кластеров. Доступ выдан по принципу наименьших привилегий: каждая команда видит только свои секреты, лишние права убраны, все обращения пишутся в аудит-лог.",
+                        "Обеспечивал бесперебойную работу сервисов на 24 Kubernetes-кластерах с нагрузкой около миллиарда запросов в сутки.",
                         "Заменил фиксированный парк on-demand нод на автоскейлинг через Karpenter (on-demand база для HA между зонами, Spot для пиковой нагрузки) и NLB (L4) для входящего трафика, сократив расходы на вычисления более чем на 60% без даунтайма при деплоях.",
-                        "Мигрировал Kubernetes-кластеры в production, staging, dev и lab окружениях (bare-metal, Hetzner, Fornex) на Talos OS без даунтайма. В рамках миграции также сменил сетевой плагин кластера с Flannel на Cilium, повысив безопасность, масштабируемость и производительность сети.",
+                        "Мигрировал production, staging, dev и lab Kubernetes-кластеры (bare-metal, Hetzner, Fornex) на Talos OS без даунтайма и в той же миграции перевёл сеть кластеров с Flannel на Cilium ради безопасности, масштабируемости и производительности сети.",
                         "Повысил безопасность Kubernetes-кластеров, перенеся системные сервисы во внутреннюю сеть и сократив внешнюю поверхность атаки.",
                         "Стандартизировал bare-metal инфраструктуру во всех окружениях и настроил полуавтоматические обновления кластеров, сократив ручную работу и число ошибок.",
                         "Контрибьютил в open-source Terraform-провайдер для Sonatype Nexus (terraform-provider-nexus): добавил поддержку OIDC security-ресурса и data source, исправил баги в CI, тестах и коде провайдера.",
-                        "Повысил стабильность кластеров, добавив StartupCPUBoost для Java-нагрузок с высоким потреблением CPU при старте. Улучшил GitOps-процессы управления инфраструктурой и предложил перенос небольших cloud-native сервисов (Redis, RabbitMQ и др.) с виртуальных машин в Kubernetes. По оценке, это сократит серверный бюджет примерно на 10%.",
-                        "Участвовал в архитектурных обсуждениях и планировании инфраструктуры в команде платформы из 5-8 человек. Проводил код-ревью и онбордил 4-6 новых инженеров."
+                        "Повысил стабильность кластеров с помощью StartupCPUBoost для Java-нагрузок, которым при старте нужно много CPU. Улучшил GitOps-процессы управления инфраструктурой. Предложил перенести небольшие cloud-native сервисы (Redis, RabbitMQ и др.) с виртуальных машин в Kubernetes; по оценке, это сократит серверный бюджет примерно на 10%.",
+                        "Участвовал в архитектурных обсуждениях и планировании инфраструктуры в платформенной команде из 5-8 человек. Ревьюил код и онбордил 4-6 новых инженеров."
                     ]
                 },
                 {
@@ -78,9 +78,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     bullets: [
                         "Строил и поддерживал CI/CD-пайплайны на GitLab CI и ArgoCD для более чем 150 проектов. Сократил среднее время пайплайна с 15 до 4 минут, перенеся Java-сборки на Jib и улучшив кэширование сборок.",
                         "Создавал и поддерживал общие Helm-чарты для стандартизации деплоя во всех проектах, что упростило патчинг уязвимостей и одновременное обновление множества проектов.",
-                        "Автоматизировал рутинные операционные задачи на Bash и Python. Разворачивал и поддерживал приложения в Kubernetes для повышения доступности и надёжности деплоев.",
-                        "Управлял NGINX и HAProxy для обеспечения высокой доступности, настраивал мониторинг и логирование на Prometheus и Grafana.",
-                        "Поддерживал production-окружения и расследовал инфраструктурные проблемы. Работал с командами разработки над улучшением процессов деплоя и помогал онбордить новых членов команды."
+                        "Автоматизировал рутинные операционные задачи на Bash и Python. Разворачивал и поддерживал приложения в Kubernetes.",
+                        "Настраивал NGINX и HAProxy для высокой доступности, мониторинг и логирование на Prometheus и Grafana.",
+                        "Поддерживал production-окружения и разбирал инфраструктурные инциденты. Вместе с командами разработки улучшал процессы деплоя, помогал онбордить новичков."
                     ]
                 },
                 {
@@ -90,12 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     bullets: [
                         "Мигрировал крупную микросервисную платформу финансового сектора (контакт-центр и партнёрские каналы на Kafka) в Kubernetes-окружение на стороне заказчика (Rancher RKE).",
                         "Перенёс git-репозитории, CI/CD-пайплайны (GitLab CI, TeamCity, ArgoCD), контейнерные реестры и хранилище артефактов в рамках этого переезда.",
-                        "Разработал и поддерживал кастомный инструмент автоматизации релизов на Python и Bash. Он строит DAG (граф зависимостей) Java-сборок между репозиториями, формирует релизные манифесты и параллельно собирает 10+ микросервисов. Это сокращает релизный процесс с 1 рабочего дня до ~1 часа.",
-                        "Контейнеризировал приложения для production с помощью Docker, использовал Kaniko для безопасной rootless-сборки образов внутри GitLab CI-пайплайнов. Стандартизировал доставку с помощью переиспользуемых Helm-чартов и CI-шаблонов.",
-                        "Разворачивал и эксплуатировал платформы корпоративных порталов в Kubernetes через ArgoCD. Платформы построены на микросервисной архитектуре с Keycloak SSO и feature flags на Unleash, плюс автоматизированный бэкап и восстановление PostgreSQL.",
+                        "Разработал и поддерживал кастомный инструмент автоматизации релизов на Python и Bash. Он строит DAG (граф зависимостей) Java-сборок между репозиториями, формирует релизные манифесты и параллельно собирает 10+ микросервисов. Релиз сократился с 1 рабочего дня до ~1 часа.",
+                        "Контейнеризировал приложения для production в Docker, образы собирал в GitLab CI через Kaniko (rootless). Стандартизировал доставку переиспользуемыми Helm-чартами и CI-шаблонами.",
+                        "Разворачивал и эксплуатировал в Kubernetes через ArgoCD платформы корпоративных порталов: микросервисы с Keycloak SSO, feature flags на Unleash и автоматическим бэкапом и восстановлением PostgreSQL.",
                         "Построил и эксплуатировал платформу электронного документооборота для ритейла, полностью работающую в Kubernetes, включая базы данных и хранилище: 3-нодовый MongoDB replica set и MinIO S3 с TLS, развёрнутые как Kubernetes workload'ы.",
                         "Настроил автоматические бэкапы (mongodump и s3cmd через CronJob) в S3 и интегрировал оборудование электронной подписи для подписания документов.",
-                        "Разворачивал и поддерживал корпоративные инфраструктурные сервисы: GitLab, GitLab Runner, ArgoCD и OpenSearch. Эти сервисы обеспечивают CI/CD и корпоративные контент/поисковые платформы для нескольких проектов."
+                        "Разворачивал и поддерживал корпоративные инфраструктурные сервисы: GitLab, GitLab Runner, ArgoCD и OpenSearch. На них работают CI/CD и корпоративные контент- и поисковые платформы нескольких проектов."
                     ]
                 },
                 {
@@ -118,8 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         "Автоматизировал сетевую инфраструктуру топливной розничной компании с множеством филиалов с помощью Ansible. Управлял 25+ роутерами Mikrotik (обновления RouterOS, firewall, DHCP, IPsec/L2TP) и VPN-шлюзами (Pritunl, SoftEther), соединяющими 30+ удалённых АЗС с головным офисом.",
                         "Автоматизировал администрирование Windows-рабочих станций и серверов филиалов (160+ рабочих станций, 30+ серверов), используя WinRM/PSRP через SSH bastion и SOCKS5-туннели для площадок без прямого доступа к сети. Это включало установку патчей и обновлений, проверку сервисов и лицензий, управление перезагрузками.",
                         "Автоматизировал обновления баз данных 1С:Предприятие в рознице. Писал скрипты для завершения активных сессий и деплоя конфигурации из центрального репозитория, поддерживая синхронизацию бухгалтерских систем филиалов и топливораздаточных колонок с минимальным простоем.",
-                        "Разворачивал и защищал ключевые инфраструктурные сервисы: Chef-сервер, GitLab, мониторинг Zabbix с алертами в Telegram и PostgreSQL. Использовал UFW, fail2ban и автоматизацию Let's Encrypt (certbot) для безопасности.",
-                        "Писал Chef-кукбуки и Ansible-роли для управления более чем 50 Linux-серверами в удалённых филиалах. Писал Python/Bash-скрипты для мониторинга АЗС-оборудования и кастомных приложений, чтобы находить и устранять проблемы."
+                        "Разворачивал и защищал инфраструктурные сервисы: Chef-сервер, GitLab, Zabbix с алертами в Telegram и PostgreSQL. Для защиты использовал UFW, fail2ban и автоматический выпуск сертификатов Let's Encrypt (certbot).",
+                        "Писал Chef-кукбуки и Ansible-роли для управления 50+ Linux-серверами в удалённых филиалах, а также Python/Bash-скрипты для мониторинга АЗС-оборудования и кастомных приложений."
                     ]
                 }
             ],
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
             metaDescription:
                 "Nikolai Bessonov, Senior DevOps Engineer (CKA/CKS). Kubernetes, Terraform, GitOps: 7+ years building infra platforms for fintech and enterprise. Open to work.",
             about:
-                "Senior DevOps Engineer with 7+ years of experience building and running large infrastructure platforms, including CI/CD for 150+ projects. Works with Kubernetes, Terraform, AWS, bare-metal (Talos, Cilium), GitLab CI, and ArgoCD, and contributes to open-source infrastructure tools. Experience in fintech and other large enterprise companies, building infrastructure platforms and SSO systems, with a focus on high availability and automation. CKA and CKS certified.",
+                "Senior DevOps Engineer with 7+ years of building and running large infrastructure platforms, including CI/CD for 150+ projects. Works with Kubernetes, Terraform, AWS, bare-metal (Talos, Cilium), GitLab CI, and ArgoCD, and contributes to open-source infrastructure tools. Has built infrastructure platforms and SSO systems for fintech and other large enterprises, where high availability and automation were the main requirements. CKA and CKS certified.",
             skills: [
                 "Python, Bash",
                 "Docker",
@@ -176,15 +176,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     period: "Jun 2025 – Present",
                     bullets: [
                         "Set up and managed production Kubernetes clusters on AWS EC2 and bare-metal servers (Hetzner, Fornex) using Terraform, with reusable modules for AWS, Hetzner, and OpenNebula that cut cluster setup time from about one week to one working day.",
-                        "Implemented centralized secrets management with HashiCorp Vault for 24 Kubernetes clusters: each team can access only its own secrets under least-privilege policies, excess permissions were removed, and all access is audit-logged.",
-                        "Kept services running reliably at about one billion requests per day across 24 Kubernetes clusters.",
+                        "Implemented centralized secrets management with HashiCorp Vault for 24 Kubernetes clusters. Access follows least privilege: each team sees only its own secrets, excess permissions were removed, and every access is written to an audit log.",
+                        "Kept services on 24 Kubernetes clusters running without interruption at about one billion requests per day.",
                         "Replaced a fixed fleet of on-demand nodes with Karpenter-managed autoscaling (on-demand baseline for HA across zones, Spot for burst capacity) and NLB (L4) for traffic ingress, cutting compute costs by over 60% with zero downtime during deployments.",
-                        "Migrated Kubernetes clusters in production, staging, dev, and lab environments (bare-metal, Hetzner, Fornex) to Talos OS with zero downtime. As part of this, also changed the cluster networking from Flannel to Cilium, improving security, scalability, and network performance.",
+                        "Migrated production, staging, dev, and lab Kubernetes clusters (bare-metal, Hetzner, Fornex) to Talos OS with zero downtime, and in the same migration moved cluster networking from Flannel to Cilium for better security, scalability, and network performance.",
                         "Improved Kubernetes cluster security by moving system services to the internal network and reducing external exposure.",
                         "Standardized bare-metal infrastructure across all environments and set up semi-automated cluster upgrades to reduce manual work and human error.",
                         "Contributed to the open-source Terraform provider for Sonatype Nexus (terraform-provider-nexus). Added support for an OIDC security resource and data source, and fixed bugs in CI, tests, and the provider code.",
-                        "Increased cluster stability by adding StartupCPUBoost for Java workloads with high CPU use at startup. Improved GitOps workflows for infrastructure management, and proposed moving small cloud-native services (Redis, RabbitMQ, etc.) from virtual machines to Kubernetes, projected to cut the server budget by about 10%.",
-                        "Took part in architecture discussions and infrastructure planning within a 5-8 person platform team. Did code reviews and onboarded 4-6 new engineers."
+                        "Made clusters more stable with StartupCPUBoost for Java workloads that need a lot of CPU at startup. Improved GitOps workflows for infrastructure management. Proposed moving small cloud-native services (Redis, RabbitMQ, etc.) from virtual machines to Kubernetes, which is estimated to cut the server budget by about 10%.",
+                        "Took part in architecture discussions and infrastructure planning in a 5-8 person platform team. Reviewed code and onboarded 4-6 new engineers."
                     ]
                 },
                 {
@@ -194,9 +194,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     bullets: [
                         "Built and managed CI/CD pipelines with GitLab CI and ArgoCD for more than 150 projects. Reduced average pipeline time from 15 to 4 minutes by moving Java builds to Jib and improving build caching.",
                         "Built and maintained shared Helm charts to standardize deployment across all projects, making it easier to patch vulnerabilities and upgrade many projects at once.",
-                        "Automated routine operational tasks with Bash and Python. Deployed and supported applications in Kubernetes to improve availability and deployment reliability.",
-                        "Managed NGINX and HAProxy for high availability, and set up monitoring and logging with Prometheus and Grafana.",
-                        "Supported production environments and investigated infrastructure problems. Worked with development teams to improve deployment processes and helped onboard new team members."
+                        "Automated routine operational tasks with Bash and Python. Deployed and supported applications in Kubernetes.",
+                        "Configured NGINX and HAProxy for high availability, plus monitoring and logging with Prometheus and Grafana.",
+                        "Supported production environments and investigated infrastructure incidents. Worked with development teams on better deployment processes and helped onboard new team members."
                     ]
                 },
                 {
@@ -206,12 +206,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     bullets: [
                         "Migrated a large financial-sector microservices platform (contact-center and partner-channel systems using Kafka) to a Kubernetes environment hosted by the customer (Rancher RKE).",
                         "Migrated git repositories, CI/CD pipelines (GitLab CI, TeamCity, ArgoCD), container registries, and artifact storage as part of that move.",
-                        "Built and maintained a custom release-automation tool in Python and Bash. It resolves Java build dependencies across repositories into a DAG (dependency graph), creates release manifests, and runs builds in parallel for 10+ microservices. That cuts the release process from 1 business day to about 1 hour.",
-                        "Containerized applications for production with Docker, and used Kaniko for secure, rootless image builds inside GitLab CI pipelines. Standardized delivery with reusable Helm charts and CI templates.",
-                        "Deployed and operated corporate portal platforms on Kubernetes using ArgoCD. These platforms use a microservices architecture with Keycloak SSO, and Unleash feature flags, plus automated PostgreSQL backup and restore.",
+                        "Built and maintained a custom release-automation tool in Python and Bash. It resolves Java build dependencies across repositories into a DAG (dependency graph), creates release manifests, and runs builds in parallel for 10+ microservices. Releases went from 1 business day to about 1 hour.",
+                        "Containerized applications for production with Docker and built images in GitLab CI with Kaniko (rootless). Standardized delivery with reusable Helm charts and CI templates.",
+                        "Deployed and operated corporate portal platforms on Kubernetes with ArgoCD: microservices with Keycloak SSO, Unleash feature flags, and automated PostgreSQL backup and restore.",
                         "Built and operated a retail Electronic Document Management platform running fully in Kubernetes, including its databases and storage: a 3-node MongoDB replica set and MinIO S3 storage with TLS, all deployed as Kubernetes workloads.",
                         "Automated backups (mongodump and s3cmd via CronJob) to S3, and integrated digital-signature hardware for signing documents.",
-                        "Deployed and maintained enterprise infrastructure services: GitLab, GitLab Runner, ArgoCD, and OpenSearch. These services support CI/CD and enterprise content/search platforms across several projects."
+                        "Deployed and maintained enterprise infrastructure services: GitLab, GitLab Runner, ArgoCD, and OpenSearch. They run CI/CD and the content and search platforms for several projects."
                     ]
                 },
                 {
@@ -234,8 +234,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         "Automated network infrastructure for a fuel retail company with many branches, using Ansible. Managed 25+ Mikrotik routers (RouterOS upgrades, firewall, DHCP, IPsec/L2TP) and VPN gateways (Pritunl, SoftEther) that connected 30+ remote gas-station branches to the head office.",
                         "Automated management of Windows workstations and branch servers (160+ workstations, 30+ branch servers), using WinRM/PSRP over SSH bastion and SOCKS5 tunnels for sites without direct network access. This covered patch and update deployment, service and license checks, and reboot management.",
                         "Automated 1C:Enterprise retail database updates. Wrote scripts to close active sessions and deploy configuration from a central repository, keeping branch accounting and fuel-dispenser systems in sync with minimal downtime.",
-                        "Deployed and secured core infrastructure services: Chef server, GitLab, Zabbix monitoring with Telegram alerts, and PostgreSQL. Used UFW, fail2ban, and Let's Encrypt (certbot) automation for security.",
-                        "Wrote Chef cookbooks and Ansible roles to manage more than 50 Linux servers across remote branches. Wrote Python/Bash scripts to monitor gas-station equipment and custom applications, to find and fix problems."
+                        "Deployed and secured infrastructure services: Chef server, GitLab, Zabbix with Telegram alerts, and PostgreSQL. Secured them with UFW, fail2ban, and automated Let's Encrypt certificates (certbot).",
+                        "Wrote Chef cookbooks and Ansible roles to manage 50+ Linux servers across remote branches, plus Python/Bash scripts to monitor gas-station equipment and custom applications."
                     ]
                 }
             ],
@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
             education: ["Diploma in Computer Science, Krasnogorsk College, 2015"],
             languages: ["English: B2", "Russian: Native"],
             contact: {
-                text: "Open to opportunities and interesting challenges. Get in touch via:",
+                text: "Open to new roles and interesting problems. Contact me via:",
                 website: "Website", email: "Email", phone: "Phone", github: "GitHub", linkedin: "LinkedIn", location: "Location",
                 ctaBtn: "Get in touch"
             },
