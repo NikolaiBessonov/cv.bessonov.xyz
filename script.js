@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     bullets: [
                         "Разворачивал и поддерживал production Kubernetes-кластеры на AWS EC2 и bare-metal серверах (Hetzner, Fornex) с помощью Terraform, используя переиспользуемые модули для AWS, Hetzner и OpenNebula, что сократило время подготовки кластера с ~недели до одного рабочего дня.",
                         "Внедрил централизованное хранение секретов на HashiCorp Vault для 24 Kubernetes-кластеров. Доступ выдан по принципу наименьших привилегий: каждая команда видит только свои секреты, лишние права убраны, все обращения пишутся в аудит-лог.",
-                        "Обеспечивал бесперебойную работу сервисов на 24 Kubernetes-кластерах с нагрузкой около миллиарда запросов в сутки.",
+                        "Обеспечивал бесперебойную работу сервисов на 24 Kubernetes-кластерах с нагрузкой 10–12k RPS.",
                         "Заменил фиксированный парк on-demand нод на автоскейлинг через Karpenter (on-demand база для HA между зонами, Spot для пиковой нагрузки) и NLB (L4) для входящего трафика, сократив расходы на вычисления более чем на 60% без даунтайма при деплоях.",
                         "Мигрировал production, staging, dev и lab Kubernetes-кластеры (bare-metal, Hetzner, Fornex) на Talos OS без даунтайма и в той же миграции перевёл сеть кластеров с Flannel на Cilium ради безопасности, масштабируемости и производительности сети.",
                         "Повысил безопасность Kubernetes-кластеров, перенеся системные сервисы во внутреннюю сеть и сократив внешнюю поверхность атаки.",
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     bullets: [
                         "Set up and managed production Kubernetes clusters on AWS EC2 and bare-metal servers (Hetzner, Fornex) using Terraform, with reusable modules for AWS, Hetzner, and OpenNebula that cut cluster setup time from about one week to one working day.",
                         "Implemented centralized secrets management with HashiCorp Vault for 24 Kubernetes clusters. Access follows least privilege: each team sees only its own secrets, excess permissions were removed, and every access is written to an audit log.",
-                        "Kept services on 24 Kubernetes clusters running without interruption at about one billion requests per day.",
+                        "Kept services on 24 Kubernetes clusters running without interruption at 10–12k RPS.",
                         "Replaced a fixed fleet of on-demand nodes with Karpenter-managed autoscaling (on-demand baseline for HA across zones, Spot for burst capacity) and NLB (L4) for traffic ingress, cutting compute costs by over 60% with zero downtime during deployments.",
                         "Migrated production, staging, dev, and lab Kubernetes clusters (bare-metal, Hetzner, Fornex) to Talos OS with zero downtime, and in the same migration moved cluster networking from Flannel to Cilium for better security, scalability, and network performance.",
                         "Improved Kubernetes cluster security by moving system services to the internal network and reducing external exposure.",
